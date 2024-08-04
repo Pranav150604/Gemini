@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    height: 100vh;
+    font-family: "Outfit";
+}
+
+i{
+    font-size: 16px;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+}
+
+.sideNavigation{
+    width: 350px;
+    background: #f0f4f9;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+.sideNavigation .topBarAction{
+    margin: 15px;
+    cursor: pointer;
+}
+
+.sideNavigation .topBarAction i{
+    font-size: 18px;
+}
+
+.sideNavigation .sideNavButton{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.sideNavigation .chatHistory{
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.sideNavigation .chatHistory::-webkit-scrollbar{
+    display: none;
+}
+
+.sideNavigation .chatHistory h5{
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin: 15px 5px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.sideNavigation .chatHistory li{
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    width: 225px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sideNavigation.expandClose{
+    width: 68px;
+}
+.sideNavigation .chatHistory i{
+    padding-right: 10px;
+}
+
+.sideNavigation .chatHistory li:hover , .sideNavigation .actionList button:hover{
+    background:#dde3ea ;
+}
+
+.sideNavigation .sideNavButton button{
+    height: 40px;
+    width: 140px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: #dde3ea;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.sideNavigation.expandClose .sideNavButton button,
+ .sideNavigation.expandClose .actionList button {
+    width: 45px;
+    text-align: center;
+ }
+
+ .sideNavigation.expandClose .collapseText,
+ .sideNavigation.expandClose .chatHistory,
+ .chatWindow .chatContent{
+    display: none;
+ }
+
+.sideNavigation .actionList{
+    position: fixed;
+    bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideNavigation .actionList button{
+    margin: 1px;
+    padding: 10px;
+    text-align:left ;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    width: 230px;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.sideNavigation .actionList button .collapseText{
+    padding: 0 10px;
+}
+
+
+.chatWindow{
+    width: 100%;
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.chatWindow .startContent{
+    min-width: 830px;
+}
+
+.chatWindow .startContent h1{
+    font-size: 3.5rem;
+    line-height: 4rem;
+    letter-spacing: normal;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-top: 18px;
+}
+
+.chatWindow .startContent h1 .brandHello{
+    background: linear-gradient(
+        74deg,
+        #4285f4 0,
+        #9b72cb 9%,
+        #d96570 20%,
+        #d96570 24%,
+        #9b72cb 35%,
+        #4285f4 44%,
+        #9b72cb 50%,
+        #d96570 56%,
+        #fff 75%,
+        #fff 100%
+    );
+    background-size: 400% 100%;
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.chatWindow .startContent h1 .brandQuestion{
+    color : #c4c7c5;
+}
+
+.chatWindow .startContent ul{
+    display: inline-flex;
+    width: 830px;
+    margin-top: 50px;
+}
+
+.chatWindow .startContent ul li{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f0f4f9;
+    cursor: pointer;
+}
+
+.chatWindow .startContent ul li:hover{
+    background: #dde3ea;
+}
+
+
+.chatWindow .startContent .promptSuggestion{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height : 150px;
+} 
+
+.chatWindow .startContent .promptSuggestion p{
+    margin: 1rem;;
+}
+
+.chatWindow .startContent .promptSuggestion .icon{
+    text-align: end;
+}
+
+.chatWindow .startContent .promptSuggestion i{
+    background: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.chatWindow .chatContent{ 
+    overflow-y: scroll;
+    width: 900px;
+    height: 650px;
+}
+
+.chatWindow .chatContent::-webkit-scrollbar{
+    display:none;
+}
+
+.inputArea, .privacyPolicy{
+    position: fixed;
+    bottom: 30px;
+    display: flex;
+    background: #f0f4f9 ;
+    border-radius: 50px;
+    padding: 4px 8px;
+}
+
+.privacyPolicy{
+    bottom: 5px;
+    font-size: 12px;
+    background: transparent;
+}
+
+.inputArea input{
+    width: 700px;
+    height: 50px;
+    padding: 1%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: transparent
+}
+
+.inputArea .iconGroup{
+    position: relative;
+    right: 4px;
+}
+
+.inputArea .iconGroup i{
+    padding: 13px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputArea .iconGroup i:nth-child(3){
+    display: none;
+}
+
+.chatWindow .chatContent .resultTitle{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chatWindow .chatContent .resultTitle img{
+    margin-right: 10px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+.chatWindow .chatContent .resultData img{
+    margin-right: 10px;
+    animation: spin 4s linear infinite;
+    height: 32px;
+    width: 32px;
+
+}
+
+@keyframes spin{
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.animatedBG{
+    border-radius: 4px;
+    border: none;
+    animation: loader 3s infinite linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#4285f4,#fff, #4285f4);
+    height: 15px;
+}
+
+.animatedBG:nth-child(3){
+    width: 70%;
+}
+
+@keyframes loader{
+    0%{
+        background-position: -800px 0;
+    }
+    to{
+        background-position: 800px 0;
+    }
+}
+
+.chatWindow .chatContent .resultData, 
+.chatWindow .chatContent .resultResponse{
+    display: flex;
+    align-items: start;
+    margin-bottom: 2rem;
+}
+
+.chatWindow .chatContent .resultData p, 
+.chatWindow .chatContent .resultResponse p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 2.2;
+    margin-bottom: 2rem;
+}
+
+.chatWindow .chatContent .resultResponse img{
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+}
+

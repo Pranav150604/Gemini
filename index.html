@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GEM_GPT </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sideNavigation">
+            <div class="topBarAction">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="sideNavButton">
+                <button>
+                    <i class="fa-solid fa-plus"></i> 
+                    <span class="collapseText" onclick=newChat()>New Chat</span>
+                </button>
+            </div>
+
+            <div class="chatHistory">
+                <h5>Recent</h5>
+                <ul>
+                    
+                </ul>
+                
+            </div>
+
+            <div class="actionList">
+                <button class="transparentButton">
+                    <i class="fa-regular fa-circle-question"></i> 
+                    <span class="collapseText">Help</span>
+                </button>
+                <button class="transparentButton">
+                    <i class="fa-solid fa-clock-rotate-left"></i> 
+                    <span class="collapseText">Activity</span>
+                </button>
+                <button class="transparentButton">
+                    <i class="fa-solid fa-gear"></i> 
+                    <span class="collapseText">Settings</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="chatWindow">
+            <div class="startContent">
+                <h1>
+                    <span class="brandHello">Hello, Pranav</span>
+                    <br>        
+                    <span class="brandQuestion">How can I help you today?</span>
+                </h1>
+                <br>
+                <ul>
+                </ul>
+            </div>
+
+            <div class="chatContent"><div class="results"></div>
+            </div>
+
+            <div class="inputArea">
+                <input type="text" placeholder="Enter a prompt here">
+                <div class="iconGroup">
+                    <i class="fa-solid fa-image"></i>
+                    <i class="fa-solid fa-microphone"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+            </div>
+
+            <p class="privacyPolicy">
+                Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy & Gemini Apps
+            </p>
+        </div>
+    </div>
+</body>
+</html>
